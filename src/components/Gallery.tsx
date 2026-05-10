@@ -2,12 +2,34 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "/images/gallery-1.jpg",
-    alt: "Drillspec Mechanical field service operations",
+    src: "/images/gallery-3.jpg",
+    alt: "Drillspec Mechanical fleet - service vehicles DM01, DM02, DM03",
+    span: "sm:col-span-2",
   },
   {
-    src: "/images/gallery-2.jpg",
-    alt: "Drilling equipment maintenance",
+    src: "/images/gallery-4.jpg",
+    alt: "Drillspec service vehicles at drill rig on mining site",
+    span: "",
+  },
+  {
+    src: "/images/gallery-6.jpg",
+    alt: "Drillspec vehicle with Epiroc drill rigs on Pilbara mine site",
+    span: "",
+  },
+  {
+    src: "/images/gallery-7.jpg",
+    alt: "Drillspec service vehicle with four drill rigs at dusk",
+    span: "sm:col-span-2",
+  },
+  {
+    src: "/images/gallery-1.jpg",
+    alt: "Drillspec technician working on drilling equipment",
+    span: "",
+  },
+  {
+    src: "/images/gallery-5.jpg",
+    alt: "Drillspec vehicles on site at sunset in the Pilbara",
+    span: "",
   },
 ];
 
@@ -28,20 +50,20 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {photos.map((photo) => (
             <div
               key={photo.src}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden group"
+              className={`relative aspect-[4/3] rounded-2xl overflow-hidden group ${photo.span}`}
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-navy-900/40 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-navy-900/10 group-hover:bg-navy-900/30 transition-colors duration-300" />
             </div>
           ))}
         </div>
