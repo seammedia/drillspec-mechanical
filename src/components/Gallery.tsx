@@ -19,17 +19,7 @@ const photos = [
   {
     src: "/images/gallery-7.jpg",
     alt: "Drillspec service vehicle with four drill rigs at dusk",
-    span: "sm:col-span-2",
-  },
-  {
-    src: "/images/gallery-1.jpg",
-    alt: "Drillspec technician working on drilling equipment",
-    span: "",
-  },
-  {
-    src: "/images/gallery-5.jpg",
-    alt: "Drillspec vehicles on site at sunset in the Pilbara",
-    span: "",
+    span: "sm:col-span-2 lg:col-span-1",
   },
 ];
 
